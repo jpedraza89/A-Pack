@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img, svg{
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes dash {
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(25deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(-25deg);}
+    100%{transform: rotate(0deg);}
+}
+
+@keyframes hideshow {
+  0% { opacity: 1; }
+  10% { opacity: 1; }
+  15% { opacity: 0; }
+  100% { opacity: 0; }
+} 
+
+#stick{
+    fill: #000000;
+    transform-origin: 50% 100%;
+    transform: rotate(0deg);
+    animation: dash 1s ease infinite; 
+}
+
+svg:hover #stick{
+    animation: dash 1s ease infinite; 
+}
+
